@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- inclusion éventuelle de fichiers JavaScript propres à la page courante --> 
+    <?php if (isset($script)): ?>
+        <?=$script;?>
+    <?php endif; ?>
+    <!-- ou bien carrément <?=$script??''?> -->
+</head>
+<body>
+    <header>
+        <h1>Dashboard Administration</h1>
+    </header>
+    <main>
+        <?php include '../templates/' . $template . '.phtml'; ?>
+    </main>
+</body>
+</html>

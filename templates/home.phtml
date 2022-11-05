@@ -1,0 +1,19 @@
+<section>
+    <h2>Les derniers articles</h2>
+    <?php // foreach ($articles as $article){ ?>
+    <?php foreach ($articles as $article): ?>
+        <article>
+            <h3><?=$article['title'];?></h3>
+            <small>Créé le <?=(new DateTimeImmutable($article['createdAt']))->format('d/m/Y');?></small>
+            
+            <?php if ($article['image']): ?>
+                <img src="images/<?=$article['image'];?>" alt="">
+            <?php endif; ?>
+
+            <p><?=$article['abstract']?$article['abstract']:substr($article['content'],0,150) . ' [...]';?> </p>
+            <a href="article.php?id=<?=$article['id'];?>">Lire la suite</a>
+        </article>
+    <?php // } ?>
+    <?php endforeach; ?>
+</section>
+    

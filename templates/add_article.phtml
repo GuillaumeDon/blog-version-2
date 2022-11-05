@@ -1,0 +1,29 @@
+<form method="POST" action="add_article.php">
+    <fieldset>
+        <legend>Ajouter un article</legend>
+        <div>
+            <label for="title">Titre de l'article</label>
+            <input type="text" id="title" name="title">
+            <?php if (isset($errors['title'])): ?>
+                <p class="error"><?=htmlspecialchars($errors['title']);?></p>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label for="abstract">Résumé de l'article</label>
+            <textarea id="abstract" name="abstract"></textarea>
+        </div>
+        <div>
+            <label for="content">Contenu de l'article</label>
+            <textarea id="content" name="content"></textarea>
+            <?php if (isset($errors['content'])): ?>
+                <p class="error"><?=htmlspecialchars($errors['content']);?></p>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label for="image">Image</label>
+            <input type="text" id="image" name="image">
+        </div>
+        <input type="submit" value="Enregistrer">
+    </fieldset>
+</form>
+   

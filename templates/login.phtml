@@ -1,0 +1,14 @@
+<form action="login.php" method="POST">
+    <?php if (isset($error)): ?>
+        <p class="error"><?=$error;?></p>
+    <?php endif; ?>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="<?=$email;?>">
+    </div>
+    <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <input type="submit" value="Connexion">
+</form>
